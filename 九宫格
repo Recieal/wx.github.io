@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8"/>
+		<title>九宫格抽奖</title>
+		<style>
+			
+			#container {
+				width: 340px;
+				margin: 0 auto;
+			}
+			
+			#list {
+				position: relative;
+			    left: -10%;
+			    width: 330px;
+			    height: 340px;
+			    list-style: none;
+			    margin: 176px 0;
+				display: flex;
+				flex-flow: row wrap;
+			}
+			
+			#list li,
+			#list span {
+				width: 100px;
+				height: 100px;
+				text-align: center;
+				line-height: 100px;
+				position: relative;
+				background-color: #384f9a;
+				margin: 1.4%;
+				border-radius: 5px;
+			}
+			
+			#list li .mask {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				left: 0;
+				top: 0;
+				background-color: #99D4FF;
+				display: none;
+			}
+			
+			#list span{
+				background-color:#ff3a59;
+				color:white;
+				font-size: 20px;
+			}
+			
+			#list span:hover {
+				cursor: pointer;
+				color: orange;
+				font-size: 18px;
+			}
+			
+			#list .active .mask {
+				display: block;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<div id="container">
+			<ul id="list">
+				<!-- mask类为抽奖滚动起来的标记 -->
+				<li>特等奖<div class="mask">特等奖</div>
+				</li>
+				<li>一等奖<div class="mask">一等奖</div>
+				</li>
+				<li>谢谢参与<div class="mask">谢谢参与</div>
+				</li>
+				<li>二等奖<div class="mask">二等奖</div>
+				</li>
+				<span id="start" onclick="dianJ()">开始抽奖</span>
+				<li>三等奖<div class="mask">三等奖</div>
+				</li>
+				<li>四等奖<div class="mask">四等奖</div>
+				</li>
+				<li>五等奖<div class="mask">五等奖</div>
+				</li>
+				<li>鼓励奖<div class="mask">鼓励奖</div>
+				</li>
+			</ul>
+		</div>
+	</body>
+
+	<script type="text/javascript">
+		var container = document.getElementById('container');
+		var li = container.getElementsByTagName('li');
+		var span = document.getElementById('start');
+		var timer = null;
+		btn = true; //定义一个抽奖开关
+
+		var prize = [0, 1, 2, 4, 7, 6, 5, 3]; //奖品li标签滚动的顺序
+
+		var num = 0; //num用来存放得到的随机数，也就是抽中的奖品
+
+		//开始抽奖
+		function dianJ() {
+			if(btn) { //当抽奖开关为true的时候，可点击抽奖
+				span.style.background = "dimgray";
+				btn = false; //点击抽奖后禁用按钮
+				num = getrandomnum(1, 8) //得到一个随机数（即奖品）
+				// console.log(num)
+				starts(num); //执行抽奖初始化
+			}
+		}
+
+		//抽中的奖品 返回1-8的整数
+		function getrandomnum(n, m) {
+			return parseInt(m * Math.random() + n);
+		}
+
+		//抽奖初始化
+		function starts(num) {
+			var i = 0; //定义一个i 用来计算抽奖跑动的总次数
+			var t = 100; //抽奖跑动的速度 初始为100毫秒
+			var rNum = 16; //标记跑动次数（这是一个条件判断分界线）
+			//抽奖滚动的函数
+			timer = setTimeout(function startscroll() {
+
+				//每次滚动抽奖将经过的区域颜色复原并减慢计时速度
+				for(var j = 0; j < 8; j++) {
+					t=t+2;
+					li[j].className = '';
+				}
+
+				var prizenum = prize[i % 8]; //通过i余8得到此刻在prize数组中的数字，该数字就是mask标记出现的位置
+				li[prizenum].className = "active";
+				i++;
+				timer = setTimeout(startscroll, t); //继续执行抽奖滚动
+				if(i >= rNum + num) { //当i大于转rNum加随机数字num次计时器结束，出现提示框提示中奖信息
+					setTimeout(function () {
+						if(num == 1) {
+							alert("恭喜你中了特等奖");
+						} else if(num == 2) {
+							alert("恭喜你中了一等奖");
+						} else if(num == 3) {
+							alert("谢谢参与");
+						} else if(num == 4) {
+							alert("恭喜你中了三等奖");
+						} else if(num == 5) {
+							alert("恭喜你中了鼓励奖");
+						} else if(num == 6) {
+							alert("恭喜你中了五等奖");
+						} else if(num == 7) {
+							alert("恭喜你中了四等奖");
+						} else if(num == 8) {
+							alert("恭喜你中了二等奖");
+						}
+						span.style.background = "#ff3a59";//将抽奖按钮复原
+						btn = true; //当计时器结束后让span标签变为抽奖状态
+					},100)			
+					clearTimeout(timer);
+				}
+
+				}, t);
+
+		}
+	</script>
+
+</html>
