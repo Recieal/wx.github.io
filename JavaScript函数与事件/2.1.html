@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		输入圆的半径：
+		<input type="text" id="banJ" />
+		<input onclick="mianJ()" type="button" value="计算" />
+		<script type="text/javascript">
+			function mianJ () {
+				var banJ=document.getElementById('banJ').value;//用id获取输入框的值
+				var mianJi=3.14*banJ*banJ;
+				alert("半径为"+banJ+"的圆的面积为："+mianJi);
+			}
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<span id="span1"></span>
+		<select id="sl">
+			<option value="+">+</option>
+			<option value="-">-</option>
+			<option value="*">*</option>
+			<option value="/">/</option>
+		</select>
+		<span id="span2"></span>
+		<span>=</span>
+		<span id="span3"></span>
+		<input type="button" onclick="jiSuan()" name="" id="" value="计算" />
+		<script type="text/javascript">
+			function jiSuan () {
+				var a = document.getElementById('span1').innerText = 1000;
+				var b = document.getElementById('span2').innerText = 1000;
+				var sum =a+document.getElementById('sl').value+b+"";
+				alert(eval(sum));
+			}
+		</script>
+	</body>
+</html>

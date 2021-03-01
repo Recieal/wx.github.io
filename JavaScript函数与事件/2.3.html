@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body id="body">
+		请选择背景颜色：
+		<select id="color" onchange="color()">
+			<option value="white">白色</option>
+			<option value="red">红色</option>
+			<option value="orange">橙色</option>
+			<option value="yellow">黄色</option>
+			<option value="green">绿色</option>
+			<option value="cyan">青色</option>
+			<option value="blue">蓝色</option>
+			<option value="violet">紫色</option>
+			<option value="#93d5dc">清水蓝</option>
+		</select>
+		<script type="text/javascript">
+			function color () {
+				document.getElementById('body').bgColor=document.getElementById('color').value;
+			}
+		</script>
+	</body>
+</html>

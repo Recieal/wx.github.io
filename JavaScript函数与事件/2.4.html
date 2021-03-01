@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#fieldset{
+				position: absolute;
+			}
+			#userNmae,#pwd{
+				opacity: 0.6;
+			}
+		</style>
+	</head>
+	<body onkeypress="key(event)">
+		<fieldset id="fieldset">
+			<legend>用户登录</legend>
+			<p>
+				邮箱：
+				<input type="text" name="userNmae" id="userNmae" value="请输入邮箱" onclick="qingChu()" />
+			</p>
+			<p>
+				密码：
+				<input type="password" name="pwd" id="pwd" value="请输入密码" />
+			</p>
+			<p>
+				<input type="submit" name="sbt" id="sbt" value="登录" onclick="yanZheng()" />
+				<a href="#" onclick="a()">忘记密码了？</a>
+			</p>
+		</fieldset>
+		<script type="text/javascript">
+			//清空输入框
+			function qingChu () {
+				document.getElementById('userNmae').setAttribute("value","");
+			}
+			//回车按键触发
+			function key (event) {
+				if (event.keyCode==13) {
+					yanZheng();
+				}
+			}
+			//邮箱密码验证
+			function yanZheng (event) {
+				if(document.getElementById('userNmae').value!="3094077070@qq.com"){
+					alert("邮箱或密码错误！");
+					document.getElementById('userNmae').value="";
+					document.getElementById('pwd').value="";
+				}else {
+					if(document.getElementById('pwd').value!="123456789") {
+						alert("邮箱或密码错误！");
+						document.getElementById('userNmae').value="";
+						document.getElementById('pwd').value="";
+					}else{
+						alert("登录成功！");
+						document.getElementById('userNmae').value="";
+						document.getElementById('pwd').value="";
+						this.close();
+					}
+				}
+			}
+			//忘记密码？
+			function a () {
+				alert("连密码也能忘记，除了干饭还会个啥？");
+				alert("五个人出去都是点五个菜吧？");
+				alert("想找回密码？")
+				alert("门都没有！")
+			}
+		</script>
+	</body> 
+</html>
