@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/font.css" />
+		<!--<link rel="stylesheet" type="text/css" href="css/index.css"/>-->
+		<style type="text/css">
+			/*头部*/
+			
+			#body {
+				width: 1200px;
+				margin: 0 auto;
+			}
+			
+			.h3-1 {
+				position: relative;
+				left: 33%;
+				margin: 0 auto;
+				display: inline-block;
+				padding: 5px 150px;
+				font-size: 30px;
+				color: gray;
+				font-weight: 400;
+				border-bottom: 2px solid red;
+			}
+			
+			ul {
+				padding: 0;
+				margin-top: 50px;
+				display: flex;
+				flex-flow: row nowrap;
+				flex-shrink: 1;
+				list-style-type: none;
+			}
+			
+			ul li {
+				/*flex-grow: 1;*/
+				box-shadow: 0px 0px 10px lightgray;
+				margin-right: 109px;
+			}
+			
+			img {
+				display: block;
+			}
+			
+			.div1 {
+				padding-left: 10px;
+			}
+			
+			.span1 {
+				line-height: 40px;
+				padding-left: 8px;
+				color: red;
+				font-size: 18px;
+			}
+			
+			.button {
+				padding: 5px 10px;
+				border-radius: 10%;
+				background-color: red;
+				color: white;
+				margin-left: 80px;
+				cursor: pointer;
+			}
+			
+			.button:hover {
+				opacity: 0.7;
+			}
+			
+			.top-b {
+				padding-bottom: 10px;
+			}
+			/*中间部分*/
+			
+			.h3-2 {
+				position: relative;
+				top: 40px;
+				left: 33%;
+				margin: 0 auto;
+				display: inline-block;
+				padding: 5px 135px;
+				font-size: 30px;
+				color: gray;
+				font-weight: 400;
+				border-bottom: 2px solid red;
+			}
+			
+			table {
+				width: 100%;
+				padding: 10px;
+				margin-top: 40px;
+				border: 1px solid lightgray;
+			}
+			
+			.tb-font {
+				padding-left: 10px;
+				font-size: 16px;
+				font-family: "宋体";
+			}
+			
+			thead td {
+				background-color: lightgray;
+				padding: 10px 0;
+			}
+			
+			thead td span {
+				padding-left: 10px;
+			}
+			
+			#isAll {
+				margin-left: 10px;
+			}
+			
+			td img {
+				display: inline-block;
+				width: 25%;
+			}
+			
+			.mess-p {
+				position: relative;
+				top: -70px;
+				color: gray;
+			}
+			
+			.jian {
+				width: 22px;
+				height: 22px;
+				border: 1px solid orangered;
+				padding: 0 5px;
+				color: orangered;
+				background-color: white;
+				text-align: center;
+				line-height: 22px;
+				position: relative;
+				cursor: pointer;
+			}
+			
+			.num {
+				width: 22px;
+				height: 19px;
+				margin-top: -4px;
+				margin-left: -6px;
+				text-align: center;
+				border: 1px solid orangered;
+				vertical-align: middle;
+			}
+			
+			.jia {
+				width: 22px;
+				height: 22px;
+				border: 1px solid orangered;
+				padding: 0 5px;
+				margin-left: -5px;
+				color: orangered;
+				background-color: white;
+				text-align: center;
+				line-height: 22px;
+				position: relative;
+				cursor: pointer;
+			}
+			
+			.shanchu {
+				padding: 5px 10px;
+				border-radius: 10%;
+				background-color: red;
+				color: white;
+				cursor: pointer;
+			}
+			
+			.shanchu:hover {
+				opacity: 0.7;
+			}
+			/*底部部分*/
+			
+			#bottom {
+				margin-top: 50px;
+				/*height: 100px;*/
+				border: 1px solid lightgray;
+			}
+			
+			.color-red {
+				color: red;
+			}
+			
+			.price-box {
+				margin-left: 82%;
+			}
+			
+			.price-box span {
+				line-height: 60px;
+			}
+			
+			.sum {
+				font-size: 18px;
+			}
+			
+			.price-button {
+				background-color: lightgray;
+				line-height: 50px;
+				overflow: hidden;
+			}
+			
+			.price-button a {
+				text-decoration: none;
+				color: white;
+				font-size: 20px;
+				padding: 15px 20px;
+				background-color: red;
+			}
+			.p-pad{
+				padding-left: 68.45%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="body">
+			<div id="top">
+				<h3 class="h3-1">商品列表</h3>
+				<ul>
+					<li>
+						<img src="img/1001.jpg" />
+						<div class="div1">华为meta40</div>
+						<div class="top-b">
+							<span class="span1">￥7999</span>
+							<span class="button">购买</span>
+						</div>
+					</li>
+					<li>
+						<img src="img/1002.jpg" />
+						<div class="div1">华为P40 Pro</div>
+						<div>
+							<span class="span1">￥7899</span>
+							<span class="button">购买</span>
+						</div>
+					</li>
+					<li>
+						<img src="img/1003.jpg" />
+						<div class="div1">iPhone 12</div>
+						<div>
+							<span class="span1">￥6799</span>
+							<span class="button">购买</span>
+						</div>
+					</li>
+					<li>
+						<img src="img/1004.jpg" />
+						<div class="div1">iPhone 11</div>
+						<div>
+							<span class="span1">￥4899</span>
+							<span class="button">购买</span>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div id="center">
+				<h3 class="h3-2">购物车详情</h3>
+				<table>
+					<thead>
+						<td>
+							<input type="checkbox" checked="true" id="isAll" value="" />
+							<span class="tb-font">全选</span>
+						</td>
+						<td>
+							<span>商品信息</span>
+						</td>
+						<td>
+							<span>单价（元）</span>
+						</td>
+						<td>
+							<span>数量</span>
+						</td>
+						<td>
+							<span>小计（元）</span>
+						</td>
+						<td>
+							<span>操作</span>
+						</td>
+					</thead>
+					<tr>
+						<td>
+							<input type="checkbox" checked="true" id="" value="" />
+						</td>
+						<td>
+							<img src="img/1001.jpg" />
+							<span class="mess-p">华为meta40</span>
+						</td>
+						<td>
+							<span class="span1 danjia">￥7999</span>
+						</td>
+						<td>
+							<span class="jian">-</span>
+							<input type="text" class="num" value="1" />
+							<span class="jia">+</span>
+						</td>
+						<td>
+							<span class="span1 xiaoji">￥7999</span>
+						</td>
+						<td>
+							<span class="shanchu">删除</span>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div id="bottom">
+				<div class="price-box">
+					<span>共<span class="color-red sPs">1</span>件商品</span>
+					<span>总金额<span class="sum color-red">￥7999</span></span>
+				</div>
+				<div class="price-button">
+					<span class="p-pad">请在倒计时结束前结算</span>
+					<a href="#">
+						立即结算
+						<span>20分00秒</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
+<script src="js/jquery-3.3.1.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	//倒计时
+	var maxtime = 20 * 60;
+	timer = setInterval(function() {
+		var a =parseInt(maxtime % 60)
+		if(maxtime >= 0) {
+			if (a<10){
+				a = "0"+a
+			}
+			$(".price-button a span").text(
+			parseInt((maxtime / 60)) + "分" + 
+			a + "秒")
+			maxtime--;
+		} else {
+			clearInterval(timer);
+			alert("时间到，结束!");
+		}
+	}, 1000);
+	//增加数量
+	$(".jia").click(function () {
+		//增加数量1
+		var vals = $(this).parent().children("input[type=text]");
+		vals.val(parseInt(vals.val())+1);
+		//更新小计
+		var prices = $(this).parent().prev().children().text().slice(1);
+		$(this).parent().next().children().text("￥"+prices*vals.val());
+	})
+	//减少数量
+	$(".jian").click(function () {
+		//减少数量1
+		var vals = $(this).parent().children("input[type=text]");
+		vals.val(parseInt(vals.val())-1);			
+		if (vals.val()<1){
+			vals.val(1)
+		    var tiShi1 = confirm("这个商品只有最后一件了，再减就没得了，确定继续吗？");
+		    if (tiShi1){
+		    	$(".shanchu").parent().parent().remove();
+		    }
+		}
+		//更新小计
+		var prices = $(this).parent().prev().children().text().slice(1);
+		$(this).parent().next().children().text("￥"+prices*vals.val());
+	})
+	//删除
+	$(".shanchu").click(function () {
+		var tiShi2 = confirm("这个东西这么好，确定不要了吗？");
+		if (tiShi2){
+			$(this).parent().parent().remove();
+		}
+	})
+	//var danjia = $(this).parent().prev().children().text().slice(1);
+</script> 
